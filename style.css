@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Autour+One&display=swap"); /*   font-family: "Autour One", cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@900&display=swap"); /* font-family: 'Gabarito', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Autour One", cursive;
+}
+
+:root {
+  --bg-color: #f3f3f3;
+  --second-bg-color: #323946;
+  --text-hover-color: rgb(2, 201, 215);
+  --text-main-color: rgb(117, 117, 117);
+  --common-transition: all 0.3s ease;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--text-hover-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 3%;
+  height: 80px;
+  box-shadow: 1px 0 5px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgb(227, 227, 227);
+  transition: all 1s ease;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-main-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  color: var(--text-main-color);
+  margin-right: 20px;
+  transition: var(--common-transition);
+}
+.hidden {
+  display: none;
+  opacity: 0;
+}
+.navbar a:hover,
+.navbar a.on {
+  color: var(--text-hover-color);
+}
+
+#menu {
+  font-size: 2rem;
+  color: var(--text-main-color);
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.home .home-content h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.home-content h1 {
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+}
+span {
+  color: var(--text-hover-color);
+}
+
+.home-content p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.home-content .social-links i {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: black;
+  transition: var(--common-transition);
+  color: var(--text-hover-color);
+}
+
+.home-content .social-links i:hover {
+  color: black;
+  background: var(--text-hover-color);
+}
+
+.button {
+  color: rgb(246, 246, 246);
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--text-hover-color);
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem black;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: var(--common-transition);
+}
+
+.button:hover {
+  box-shadow: none;
+  background-color: var(--second-bg-color);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.heading-about {
+  font-size: 2.5rem;
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.about-content p {
+  margin-top: 6px;
+}
+
+.about-content .button {
+  margin-top: 20px;
+}
+.heading-skills {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+section.skills {
+  min-height: 100vh;
+  padding: 150px;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.skills-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--common-transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skills-box i {
+  font-size: 3rem;
+  color: var(--text-hover-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.skills-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--second-bg-color);
+}
+
+.skills-box p {
+  font-size: 1rem;
+  color: var(--text-main-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.portfolio {
+  background-color: white;
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+.portfolio h2 {
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.portfolio-container {
+  padding: 0 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
+
+.portfolio-container .portfolio-box {
+  position: relative;
+  border-radius: 2em;
+  box-shadow: 0 0 1rem black;
+  overflow: hidden;
+  display: flex;
+}
+
+.portfolio-box img {
+  width: 100%;
+}
+
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--text-hover-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.portfolio-box .portfolio-layer h4 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  font-family: "Gabarito", sans-serif;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 2em;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+
+.portfolio-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--second-bg-color);
+}
+
+.fa-arrow-up-right-from-square {
+  font-size: 1.5rem;
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-arrow-up-right-from-square:hover {
+  color: var(--second-bg-color);
+  transform: translateX(5px);
+}
+
+.github-section {
+  background-color: var(--bg-color);
+  padding: 4rem 0;
+  text-align: center;
+  min-height: 40vh;
+}
+
+.github-section h2 {
+  font-size: 2.5rem;
+  color: var(--second-bg-color);
+  margin-bottom: 1rem;
+}
+
+.github-section p {
+  font-size: 1rem;
+  color: var(--text-main-color);
+  margin-bottom: 2rem;
+}
+
+.github-link {
+  font-size: 1.2rem;
+  color: var(--text-hover-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--second-bg-color);
+}
+
+.github-icon {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.contact {
+  background-color: white;
+  padding: 4rem 0;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: var(--second-bg-color);
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.input-box input {
+  width: 48%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--second-bg-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--second-bg-color);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-box input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--text-hover-color);
+}
+
+.contact button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--text-hover-color);
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: var(--second-bg-color);
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  min-height: 5vh;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  transition: var(--common-transition);
+}
+.social-links a:hover {
+  color: var(--text-hover-color);
+}
